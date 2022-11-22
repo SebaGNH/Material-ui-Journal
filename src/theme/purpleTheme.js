@@ -7,6 +7,9 @@ const purpleTheme = createTheme({
     primary:{
       main: '#262254'
     },
+    blackGray:{
+      main: '#292929'
+    },
     secondary:{
       main: '#543884'
     },
