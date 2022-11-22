@@ -1,5 +1,6 @@
-import React from 'react'
-import { Grid, TextField, Typography } from '@mui/material'
+import { Link as RouterLink} from 'react-router-dom';
+import {Google} from '@mui/icons-material';
+import { Button, Grid, Link, TextField, Typography } from '@mui/material'
 
 const RegisterPage = () => {
   return (
@@ -10,7 +11,7 @@ const RegisterPage = () => {
       justifyContent="center"
       sx={{
         minHeight: '100vh',
-        backgroundColor: 'blackGray.main', 
+        backgroundColor: 'primary.main', 
         padding: 4 
       }}
     >
@@ -29,11 +30,11 @@ const RegisterPage = () => {
           sx={{
             mb: 1 //Margin Bottom
           }}
-        >Login</Typography>
+        >Register</Typography>
         
         <form>
           <Grid container>
-            <Grid item xs="12" sx={{mt:2}}>
+            <Grid item xs={12} sx={{mt:2}}>
               <TextField
                 label="correo"
                 type="email"
@@ -42,13 +43,31 @@ const RegisterPage = () => {
               ></TextField>
             </Grid>
 
-            <Grid item xs="12" sx={{mt:2}}>
+            <Grid item xs={12} sx={{mt:2}}>
               <TextField
                 label="Password"
                 type="password"
                 placeholder="Password"
                 fullWidth
               ></TextField>
+            </Grid>
+
+            <Grid container spacing={2} sx={{my:2}}> 
+              <Grid item xs={6}>
+                <Button variant='contained' fullWidth>Login</Button>
+              </Grid>
+              <Grid item xs={6}>
+                <Button variant='contained' fullWidth>
+                  <Google />
+                  <Typography sx={{ml:1}}>Google</Typography>
+                </Button>
+              </Grid>
+            </Grid>
+
+            <Grid container direction="row" justifyContent="end">
+            <Link  component={RouterLink} color="inherit" to="/auth/login">
+              Crear una cuenta
+            </Link>
             </Grid>
           </Grid>
         </form>
@@ -59,13 +78,3 @@ const RegisterPage = () => {
 }
 
 export default RegisterPage
-
-/*
-sx hace referencia a "Style X"
-
-xs={3} tendrá 3 posiciones en pantallas pequeñas
-md
-xl
-
-Typography perteneces a material.ui
-*/
