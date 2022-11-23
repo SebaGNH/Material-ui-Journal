@@ -6,7 +6,7 @@ import AuthLayout from '../layout/AuthLayout';
 
 const LoginPage = () => {
   return (
-    <AuthLayout title="Login">
+    <AuthLayout title="Login" bgColor='primary'>
         <form>
           <Grid container>
             <Grid item xs={12} sx={{mt:2}}>

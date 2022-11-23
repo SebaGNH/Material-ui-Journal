@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material'
 
-const AuthLayout = ({ children, title="" }) => {
+const AuthLayout = ({ children, title="", bgColor="primary" }) => {
   return (
     <Grid container
       spacing={0}
@@ -9,7 +9,7 @@ const AuthLayout = ({ children, title="" }) => {
       justifyContent="center"
       sx={{
         minHeight: '100vh',
-        backgroundColor: 'primary.main', 
+        backgroundColor: `${bgColor}.main`, 
         padding: 4 
         }}
       >
