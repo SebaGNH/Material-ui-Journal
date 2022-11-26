@@ -1,6 +1,7 @@
 import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
-import LogoutIcon from '@mui/icons-material/Logout';
+import { Menu as MenuIcon, Logout as LogOutIcon } from '@mui/icons-material';
+
+
 
 
 const NavBar = ({drawerWidth}) => {
@@ -18,14 +19,14 @@ const NavBar = ({drawerWidth}) => {
           edge="start"
           sx={{mr:2, display: {sm:"none"}}}
         >
-          <MenuIcon/>
+          <MenuIcon />
         </IconButton>
 
         <Grid container direction="row" justifyContent="space-between" alignItems="center"      
         >
           <Typography variant="h6" noWrap component="div">Journal App</Typography>
           <IconButton color="error">
-            <LogoutIcon />
+            <LogOutIcon />
           </IconButton>
         </Grid>
       </Toolbar>
