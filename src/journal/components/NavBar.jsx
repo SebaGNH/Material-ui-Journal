@@ -4,13 +4,13 @@ import { Menu as MenuIcon, Logout as LogOutIcon } from '@mui/icons-material';
 
 
 
-const NavBar = ({drawerWidth}) => {
+const NavBar = ({drawerWidth = 380}) => {
   return (
     <AppBar 
       position="fixed"
       sx={{
-        width:{sm:`calc(100% - ${drawerWidth}px)`},
-              ml: {sm:`${drawerWidth}px`}
+        width:{ sm:`calc(100% - ${drawerWidth}px)`}, //Ancho en pantallas sm
+                ml: {sm:`${drawerWidth}px`} //margin left en pantallas sm
       }}
     >
       <Toolbar>
@@ -22,9 +22,14 @@ const NavBar = ({drawerWidth}) => {
           <MenuIcon />
         </IconButton>
 
-        <Grid container direction="row" justifyContent="space-between" alignItems="center"      
+        <Grid container 
+          direction="row" 
+          justifyContent="space-between" 
+          alignItems="center"      
         >
-          <Typography variant="h6" noWrap component="div">Journal App</Typography>
+          <Typography variant="h6" noWrap component="div"
+            >Journal App
+          </Typography>
           <IconButton color="error">
             <LogOutIcon />
           </IconButton>

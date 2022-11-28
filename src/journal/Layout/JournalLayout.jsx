@@ -1,5 +1,7 @@
 import { Box } from "@mui/material"
-import NavBar from "../components/NavBar";
+//import NavBar from "../components/NavBar";
+import { NavBar, Sidebar } from "../components";
+
 
 const drawerWidth = 240; //Menú lateral, no hace falta poner px de pixeles
 
@@ -7,9 +9,10 @@ const drawerWidth = 240; //Menú lateral, no hace falta poner px de pixeles
 const JournalLayout = ({children}) => {
   return (
     <Box sx={{display: "flex"}}>
+
       <NavBar drawerWidth={drawerWidth}/>
 
-      {/* Sidebar */}
+      <Sidebar />
 
       <Box component="main"
         sx={{
