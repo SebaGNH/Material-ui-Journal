@@ -1,6 +1,5 @@
 import { Box } from "@mui/material"
-//import NavBar from "../components/NavBar";
-import { NavBar, Sidebar } from "../components";
+import { NavBar, Sidebar, Toolbar } from "../components";
 
 
 const drawerWidth = 240; //Menú lateral, no hace falta poner px de pixeles
@@ -20,7 +19,7 @@ const JournalLayout = ({children}) => {
           p:3
         }}
       >
-      {/* Toolbar */}
+      <Toolbar />
       {children}
       </Box>
 
