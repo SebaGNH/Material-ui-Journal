@@ -37,6 +37,7 @@ const NoteView = () => {
           fullWidth
           placeholder='Que sucedió en el día de hoy?'
           minRows={ 5 } //5 renglones
+          sx={{ mb: 2 }}
         >
         </TextField>
       </Grid>

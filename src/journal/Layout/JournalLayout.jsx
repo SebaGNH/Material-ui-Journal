@@ -11,7 +11,7 @@ const JournalLayout = ({children}) => {
 
       <NavBar drawerWidth={drawerWidth}/>
 
-      <Sidebar />
+      <Sidebar drawerWidth={drawerWidth}/>
 
       <Box component="main"
         sx={{
